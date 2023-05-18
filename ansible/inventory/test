@@ -1,0 +1,11 @@
+[test]
+172.31.6.117 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=~/.ssh/ekstep/keys/learning-platform
+
+[test:vars]
+user=ubuntu
+user_home=/home/ubuntu
+at_home={{user_home}}/AuthoringTool
+s3_location=ekstep-public/dev
+
+[all:children]
+test

@@ -1,0 +1,14 @@
+app/preview
+app/bower_components
+/node_modules
+plugins
+/coverage
+/coverage_framework
+/bower_components
+/semantic
+semantic.json
+/telemetry.log
+/content-editor
+content-editor.zip
+/docs
+telemetry.json
