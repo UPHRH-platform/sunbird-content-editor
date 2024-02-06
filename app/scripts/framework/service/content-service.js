@@ -99,6 +99,10 @@ org.ekstep.services.contentService = new (org.ekstep.services.iService.extend({
 				update = true
 			}
 			if (update) {
+				if(content['difficultyLevel'] && content['difficultyLevel'].type === 'String') {
+					const difficultyLevel = content['difficultyLevel'];
+					content['difficultyLevel'] = [difficultyLevel];
+				}
 				var requestObj = { request: { content: content } }
 				instance.patch(this.serviceURL() + this.getConfig('contentUpdateUrl', '/v3/update/') + contentId, requestObj, this.requestHeaders, function (saveContentError, saveContentResponse) {
 					/* istanbul ignore else */
